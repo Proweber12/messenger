@@ -1,0 +1,11 @@
+item_int: 4
+items_dict:
+  computer: 200€-1000€
+  keyboard: 5€-50€
+  mouse: 4€-7€
+  printer: 100€-300€
+items_list:
+- computer
+- printer
+- keyboard
+- mouse
