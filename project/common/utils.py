@@ -1,10 +1,10 @@
 import json
 
 from common.variables import ENCODING, MAX_PACKAGE_SIZE
+from errors import NonDictInputError
 
 
 def get_message(client):
-
     encoded_response = client.recv(MAX_PACKAGE_SIZE)
     if isinstance(encoded_response, bytes):
         json_response = encoded_response.decode(ENCODING)
@@ -16,5 +16,7 @@ def get_message(client):
 
 
 def send_message(socket, msg):
+    if not isinstance(msg, dict):
+        raise NonDictInputError
     conversion_to_json = json.dumps(msg).encode(ENCODING)
     socket.send(conversion_to_json)
