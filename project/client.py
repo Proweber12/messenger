@@ -1,9 +1,16 @@
+# Run command: python server.py -address -port
+
 from socket import socket, AF_INET, SOCK_STREAM
 import sys
 import time
+import logging
 
 from common.variables import DEFAULT_IP, DEFAULT_PORT, ACTION, PRESENCE, TIME, USER, USERNAME, RESPONSE, ERROR
 from common.utils import send_message, get_message
+
+import logs.client_log_config
+
+CLIENT_LOGGER = logging.getLogger('app.client')
 
 
 def generate_presence(username='Anonymous'):
@@ -12,15 +19,18 @@ def generate_presence(username='Anonymous'):
         TIME: time.time(),
         USER: {USERNAME: username}
     }
-
+    CLIENT_LOGGER.info(f'Сформированно {PRESENCE} сообщение пользователем с ником - {username}')
     return presence_msg
 
 
 def parse_server_message(msg):
     if RESPONSE in msg:
         if msg[RESPONSE] == 200:
+            CLIENT_LOGGER.info(f'Сервер дал ответ с кодом {msg[RESPONSE]}')
             return 'Status code 200: OK'
+        CLIENT_LOGGER.info(f'Сервер дал ответ с кодом {msg[RESPONSE]}, ошибка {msg[ERROR]}')
         return f'Status code 400: {msg[ERROR]}'
+    CLIENT_LOGGER.error('Возникла ошибка переданного значения')
     raise ValueError
 
 
@@ -34,7 +44,7 @@ def main():
         ip_address = DEFAULT_IP
         port = DEFAULT_PORT
     except ValueError:
-        print("Значение номера порта должно быть в диапазоне от 1024 до 65535")
+        CLIENT_LOGGER.error('Значение номера порта должно быть в диапазоне от 1024 до 65535')
 
     client_sock = socket(AF_INET, SOCK_STREAM)
     client_sock.connect((ip_address, port))
@@ -42,9 +52,9 @@ def main():
     send_message(client_sock, presence_message)
     try:
         answer_to_server = parse_server_message(get_message(client_sock))
-        print(answer_to_server)
+        CLIENT_LOGGER.info(f'Ответ сервера: {answer_to_server}')
     except ValueError:
-        print('Не получилось декодировать сообщение')
+        CLIENT_LOGGER.error('Ошибка декодирования сообщение')
 
     
 
