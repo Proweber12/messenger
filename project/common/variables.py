@@ -5,6 +5,13 @@ MAX_PACKAGE_SIZE = 1024
 
 ACTION = 'action'
 PRESENCE = 'presence'
+PROBE = 'prоbe'
+MSG = 'msg'
+QUIT = 'quit'
+AUTHENTICATE = 'authenticate'
+JOIN = 'join'
+LEAVE = 'leave'
+
 TIME = 'time'
 USER = 'user'
 USERNAME = 'username'
