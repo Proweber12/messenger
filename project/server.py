@@ -8,9 +8,12 @@ from common.variables import DEFAULT_IP, DEFAULT_PORT, MAX_CONNECTIONS, ACTION, 
     RESPONSE, ERROR
 from common.utils import get_message, send_message
 import logs.server_log_config
+from decos import log
 
 SERVER_LOGGER = logging.getLogger('app.server')
 
+
+@log
 def processing_client_msg(msg):
     if ACTION in msg and msg[ACTION] == PRESENCE and TIME in msg and USER in msg and msg[USER][USERNAME] == 'Anonymous':
         SERVER_LOGGER.info('Успешный запрос от клиента к серверу, статус код 200')
