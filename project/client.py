@@ -7,12 +7,13 @@ import logging
 
 from common.variables import DEFAULT_IP, DEFAULT_PORT, ACTION, PRESENCE, TIME, USER, USERNAME, RESPONSE, ERROR
 from common.utils import send_message, get_message
-
 import logs.client_log_config
+from decos import log
 
 CLIENT_LOGGER = logging.getLogger('app.client')
 
 
+@log
 def generate_presence(username='Anonymous'):
     presence_msg = {
         ACTION: PRESENCE,
@@ -23,6 +24,7 @@ def generate_presence(username='Anonymous'):
     return presence_msg
 
 
+@log
 def parse_server_message(msg):
     if RESPONSE in msg:
         if msg[RESPONSE] == 200:
@@ -55,8 +57,6 @@ def main():
         CLIENT_LOGGER.info(f'Ответ сервера: {answer_to_server}')
     except ValueError:
         CLIENT_LOGGER.error('Ошибка декодирования сообщение')
-
-    
 
 
 if __name__ == '__main__':
