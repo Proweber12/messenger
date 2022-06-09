@@ -1,0 +1,3 @@
+2022-06-07 17:26:31,660   INFO       server               Сообщение от клиента: {'action': 'presence', 'time': 1654611991.6533675, 'user': {'username': 'Anonymous'}}
+2022-06-07 17:26:31,661   INFO       server               Успешный запрос от клиента к серверу, статус код 200
+2022-06-07 17:26:31,668   INFO       server               Функция processing_client_msg была вызвана с параметрами ({'action': 'presence', 'time': 1654611991.6533675, 'user': {'username': 'Anonymous'}},), {} | Из модуля __main__ | Эта функция была вызвана в функции main
