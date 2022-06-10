@@ -1,0 +1,18 @@
+2022-06-06 17:12:19,738   INFO       server               Сообщение от клиента: {'action': 'presence', 'time': 1654524739.729853, 'user': {'username': 'Anonymous'}}
+2022-06-06 17:12:19,738   INFO       server               Успешный запрос от клиента к серверу, статус код 200
+2022-06-06 17:12:19,739   INFO       server               Функция processing_client_msg была вызвана с параметрами ({'action': 'presence', 'time': 1654524739.729853, 'user': {'username': 'Anonymous'}},), {} | Из модуля __main__ | Эта функция была вызвана в функции main
+2022-06-06 17:12:20,555   INFO       server               Сообщение от клиента: {'action': 'presence', 'time': 1654524740.5482814, 'user': {'username': 'Anonymous'}}
+2022-06-06 17:12:20,556   INFO       server               Успешный запрос от клиента к серверу, статус код 200
+2022-06-06 17:12:20,556   INFO       server               Функция processing_client_msg была вызвана с параметрами ({'action': 'presence', 'time': 1654524740.5482814, 'user': {'username': 'Anonymous'}},), {} | Из модуля __main__ | Эта функция была вызвана в функции main
+2022-06-06 17:12:20,959   INFO       server               Сообщение от клиента: {'action': 'presence', 'time': 1654524740.954871, 'user': {'username': 'Anonymous'}}
+2022-06-06 17:12:20,959   INFO       server               Успешный запрос от клиента к серверу, статус код 200
+2022-06-06 17:12:20,959   INFO       server               Функция processing_client_msg была вызвана с параметрами ({'action': 'presence', 'time': 1654524740.954871, 'user': {'username': 'Anonymous'}},), {} | Из модуля __main__ | Эта функция была вызвана в функции main
+2022-06-06 17:12:21,499   INFO       server               Сообщение от клиента: {'action': 'presence', 'time': 1654524741.494581, 'user': {'username': 'Anonymous'}}
+2022-06-06 17:12:21,499   INFO       server               Успешный запрос от клиента к серверу, статус код 200
+2022-06-06 17:12:21,500   INFO       server               Функция processing_client_msg была вызвана с параметрами ({'action': 'presence', 'time': 1654524741.494581, 'user': {'username': 'Anonymous'}},), {} | Из модуля __main__ | Эта функция была вызвана в функции main
+2022-06-06 17:12:21,874   INFO       server               Сообщение от клиента: {'action': 'presence', 'time': 1654524741.8676581, 'user': {'username': 'Anonymous'}}
+2022-06-06 17:12:21,874   INFO       server               Успешный запрос от клиента к серверу, статус код 200
+2022-06-06 17:12:21,874   INFO       server               Функция processing_client_msg была вызвана с параметрами ({'action': 'presence', 'time': 1654524741.8676581, 'user': {'username': 'Anonymous'}},), {} | Из модуля __main__ | Эта функция была вызвана в функции main
+2022-06-06 17:12:22,529   INFO       server               Сообщение от клиента: {'action': 'presence', 'time': 1654524742.52486, 'user': {'username': 'Anonymous'}}
+2022-06-06 17:12:22,529   INFO       server               Успешный запрос от клиента к серверу, статус код 200
+2022-06-06 17:12:22,529   INFO       server               Функция processing_client_msg была вызвана с параметрами ({'action': 'presence', 'time': 1654524742.52486, 'user': {'username': 'Anonymous'}},), {} | Из модуля __main__ | Эта функция была вызвана в функции main
