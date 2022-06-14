@@ -14,12 +14,12 @@ file_handler = logging.FileHandler(log_file_path, encoding='utf-8')
 file_handler.setFormatter(log_format)
 file_handler.setLevel(logging.DEBUG)
 
-stream_handler = logging.StreamHandler(stderr)
-stream_handler.setFormatter(log_format)
-stream_handler.setLevel(logging.DEBUG)
+# stream_handler = logging.StreamHandler(stderr)
+# stream_handler.setFormatter(log_format)
+# stream_handler.setLevel(logging.DEBUG)
 
 log.addHandler(file_handler)
-log.addHandler(stream_handler)
+# log.addHandler(stream_handler)
 log.setLevel(logging.DEBUG)
 
 
